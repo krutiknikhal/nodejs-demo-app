@@ -2,9 +2,13 @@
 
 ## Project Overview
 
-This project demonstrates a CI/CD pipeline for a Node.js web application using GitHub Actions and Docker.
+## Project Overview
 
-The pipeline is triggered automatically whenever code is pushed to the `main` branch. It runs automated tests, builds a Docker image after the tests pass, and pushes the image to Docker Hub.
+This project demonstrates the implementation of an automated CI/CD pipeline for a containerized Node.js application using GitHub Actions and Docker. The application itself is intentionally lightweight, as the primary focus of the project is to understand and implement the CI/CD lifecycle rather than build a feature-rich web application.
+
+On every push to the `main` branch, GitHub Actions automatically installs dependencies, runs tests, builds a Docker image after successful validation, and pushes the image to Docker Hub.
+
+This repository also serves as an ongoing hands-on learning project. I plan to continue improving the application, CI/CD workflow, containerization practices, testing, and documentation as I explore additional DevOps concepts.
 
 ## Tools and Technologies
 
@@ -25,6 +29,10 @@ nodejs-demo-app/
 ├── .github/
 │   └── workflows/
 │       └── main.yml
+├── docs/
+│   ├── dockerfile-not-found.md
+│   ├── dockerhub-authentication-error.md
+│   └── git-push-rebase-conflict.md
 ├── screenshots/
 │   ├── githubactions.png
 │   ├── dockerhubimage.png
@@ -32,12 +40,12 @@ nodejs-demo-app/
 ├── .dockerignore
 ├── .gitignore
 ├── Dockerfile
+├── README.md
 ├── app.js
 ├── app.test.js
 ├── server.js
 ├── package.json
-├── package-lock.json
-└── README.md
+└── package-lock.json
 ```
 
 ## Application Endpoints
@@ -222,6 +230,14 @@ The actual credential values are not stored in the repository or workflow file.
 ### Running Application
 
 ![Running Application](screenshots/apprunning.png)
+
+## Troubleshooting and Learnings
+
+During this project, I documented some of the real issues encountered while working with Docker, GitHub Actions, Docker Hub, and Git.
+
+- [Dockerfile Not Found During Docker Build](docs/dockerfile-not-found.md)
+- [Docker Hub Authentication Failure in GitHub Actions](docs/dockerhub-authentication-error.md)
+- [Git Push Rejection and Rebase Conflict](docs/git-push-rebase-conflict.md)
 
 ## What I Learned
 
