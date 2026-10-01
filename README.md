@@ -2,8 +2,6 @@
 
 ## Project Overview
 
-## Project Overview
-
 This project demonstrates the implementation of an automated CI/CD pipeline for a containerized Node.js application using GitHub Actions and Docker. The application itself is intentionally lightweight, as the primary focus of the project is to understand and implement the CI/CD lifecycle rather than build a feature-rich web application.
 
 On every push to the `main` branch, GitHub Actions automatically installs dependencies, runs tests, builds a Docker image after successful validation, and pushes the image to Docker Hub.
